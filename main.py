@@ -95,12 +95,10 @@ def developer_reviews_analysis(desarrolladora : str):
     df_dev_rev = pd.read_parquet('Archivos API/def_dev_rev.parquet')
     df_dev = df_dev_rev[df_dev_rev['developer']==desarrolladora]
 
-    return {f"{desarrolladora}":[f'Negative = {df_dev[df_dev['sentiment_analysis']==0].shape[0]}',
-                                 f'Positive = {df_dev[df_dev['sentiment_analysis']==2].shape[0]}']}
+    return {f"{desarrolladora}":{'Negative': {df_dev[df_dev['sentiment_analysis']==0].shape[0]},
+                                 'Positive': {df_dev[df_dev['sentiment_analysis']==2].shape[0]}}}
 
 @app.get("/recomendacion_juego/{id_producto}")
-
-
 def recomendacion_juego (id_producto : int):
 
     lista_reco = []
