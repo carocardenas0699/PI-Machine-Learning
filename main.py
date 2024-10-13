@@ -3,11 +3,19 @@ import pyarrow.parquet as pq
 import pandas as pd
 from fastapi import FastAPI
 
+
+#http://127.0.0.1:80004
+
 app = FastAPI()
+
+@app.get("/")
+def index():
+    return {"Sistema Recomendacion STEAM"}
 
 # Devuelve la cantidad de items y porcentaje de contenido Free por año para la empresa desarrolladora ingresada como
 # parametro.
 @app.get("/developer/{desarrollador}")
+
 def developer(desarrollador : str):
 
     df_dev = pd.read_parquet('Archivos API/def_developer.parquet')
