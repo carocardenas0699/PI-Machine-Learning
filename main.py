@@ -2,6 +2,8 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 import pandas as pd
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
+from jinja2 import Template
 
 
 #http://127.0.0.1:80004
@@ -15,7 +17,6 @@ def index():
 # Devuelve la cantidad de items y porcentaje de contenido Free por año para la empresa desarrolladora ingresada como
 # parametro.
 @app.get("/developer/{desarrollador}")
-
 def developer(desarrollador : str):
 
     df_dev = pd.read_parquet('Archivos API/def_developer.parquet')
@@ -25,9 +26,23 @@ def developer(desarrollador : str):
     dev = dev.groupby(['developer','release_year']).agg({'free': 'sum','tot':'count'}).reset_index()
     dev['percentage']=((dev['free']/dev['tot'])*100).round(2)
     dev.drop(columns=['developer','free'],inplace=True)
-    dev.rename(columns={'release_year':'año','tot':'Cantidad de items','percentage':'Contenido Free (%)'},inplace=True)
+    dev.rename(columns={'release_year':'Año','tot':'Cantidad de items','percentage':'Contenido Free (%)'},inplace=True)
     
-    return dev
+    # Usar Jinja2 para renderizar la tabla dentro de una plantilla HTML
+    template = Template("""
+    <html>
+    <head><title>Tabla de Datos</title></head>
+    <body>
+        {{ table_html | safe }}
+    </body>
+    </html>
+    """)
+    
+    # Renderizar la plantilla con los datos
+    html_content = template.render(table_html=dev.to_html())
+
+    return HTMLResponse(content=html_content)
+    #return dev.to_dict(orient='records')
 
 
 # Devuelve la cantidad de dinero gastado por el usuario ingresado como parametro, el porcentaje de recomendación en 
@@ -104,3 +119,5 @@ def recomendacion_juego (id_producto : int):
     lista_reco = []
     
     return lista_reco
+
+    
