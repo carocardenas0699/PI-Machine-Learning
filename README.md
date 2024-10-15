@@ -102,13 +102,13 @@ En este DataFrame no se adicionaron columnas, **playtime** corresponde a la colu
 
 ### Carpetas
 
-- **Archivos API:** Contiene los archivos procesados y adaptados segun los requerimientos de cada funcion. Son los archivos que se cargan en las funciones del main.py y el main.ipynb
-- **Archivos EDA:** Contiene los archivos resultantes del notebook EDA. Son los archivos que se cargan en el notebook Archivos_API.ipynb para crear los archivos especificos que se usaran en cada funcion.
-- **Archivos ETL:** Contiene los archivos resultantes del notebook ETL. Son los archivos que se cargan al ejecutar el notebook EDA.ipynb
+- **[Archivos API:](Archivos%20API)** Contiene los archivos procesados y adaptados segun los requerimientos de cada funcion. Son los archivos que se cargan en las funciones del main.py y el main.ipynb
+- **[Archivos EDA:](Archivos%20EDA)** Contiene los archivos resultantes del notebook EDA. Son los archivos que se cargan en el notebook Archivos_API.ipynb para crear los archivos especificos que se usaran en cada funcion.
+- **[Archivos ETL:](Archivos%20ETL)** Contiene los archivos resultantes del notebook ETL. Son los archivos que se cargan al ejecutar el notebook EDA.ipynb
 
 ### Notebooks
 
-- **Archivos_API:** En este notebook se realizo las transformaciones (merge, join y drop) necesarias para crear un archivo especifico para cada funcion que se requiere ejecutar.
+- **[Archivos_API:](Archivos_API.ipynb)** En este notebook se realizo las transformaciones (merge, join y drop) necesarias para crear un archivo especifico para cada funcion que se requiere ejecutar.
 
 - **[EDA:](EDA.ipynb)** Contiene todo el Analisis Exploratorio de Datos del proyecto. Este incluye:
     - Manejo de nulos, vacios y duplicados
@@ -117,18 +117,18 @@ En este DataFrame no se adicionaron columnas, **playtime** corresponde a la colu
     - Analisis de sentimiento de los Reviews
     - Matrices de correlacion
 
-- **ETL:** Contiene toda la parte de extraccion y transformacion de los datos. Esto incluye:
+- **[ETL:](ETL.ipynb)** Contiene toda la parte de extraccion y transformacion de los datos. Esto incluye:
     - Desanidado de los archivos Reviews e Items
     - Normalizacion de nombre de las columnas
     - Cambio de tipo de dato
     - Eliminacion/adicion de columnas
 
-- **main:** Contiene todas las funciones de la API de manera que se puedan ejecutar directamente en el notebook para control de resultados.
+- **[main:](main.ipynb)** Contiene todas las funciones de la API de manera que se puedan ejecutar directamente en el notebook para control de resultados.
 
 ### Archivos adicionales
 
-- **main.py:** Es el archivo conectado a la API y que se ejecuta desde el link de Render
-- **requirements.txt:** Es el archivo donde se encuentran todas las librerias y versiones necesarias para ejecuar el proyecto desde un entorno virtual
+- **[main.py:](main.py)** Es el archivo conectado a la API y que se ejecuta desde el link de Render
+- **[requirements.txt:](requirements.txt)** Es el archivo donde se encuentran todas las librerias y versiones necesarias para ejecuar el proyecto desde un entorno virtual
 
 ## Instalacion
 
@@ -198,8 +198,31 @@ Para el modelo de recomendacion se empleo unicamente el DataFrame de games:
 6. Se ordenaban estos valores de mayor a menor y se tomaban los indices de los 5 primeros valores para los cuales se procedia buscar los *item_id* correspondientes.
 
 ## Resultados
-Para este proyecto se desarrollaron 
-Link Deployment: https://pi-machine-learning.onrender.com/
+Para este proyecto se realizaron 6 funciones que se pueden desarrollaron en los archivos [main.ipynb](main.ipynb) y [main.py](main.py) y se puede encontrar en este [servidor](https://pi-machine-learning.onrender.com/) de Render.
+
++ def **developer( *`desarrolladora` : str* )**:
+    Devuelve la cantidad de items y porcentaje de contenido Free por año para la empresa `desarrolladora`. <br>
+    **Ejemplo de uso:** [pi-machine-learning.onrender.com/developer/DL Softworks](https://pi-machine-learning.onrender.com/developer/DL%20Softworks)
+
++ def **userdata( *`User_id` : str* )**:
+    Devuelve la cantidad de dinero gastado por el `usuario`, el porcentaje de recomendacion y la cantidad de items reseñados.
+    **Ejemplo de uso:** [pi-machine-learning.onrender.com/userdata/76561198070565427](https://pi-machine-learning.onrender.com/userdata/76561198070565427)
+
++ def **UserForGenre( *`genero` : str* )**:
+    Devuelve el usuario que acumula más horas jugadas para el `género` dado y una lista de la acumulación de horas jugadas por año de lanzamiento.
+    **Ejemplo de uso:** [pi-machine-learning.onrender.com/UserForGenre/Aventure](https://pi-machine-learning.onrender.com/UserForGenre/Adventure)
+	
++ def **best_developer_year( *`año` : int* )**:
+   Devuelve el top 3 de desarrolladores con juegos más recomendados por usuarios para el `año` dado basado en las columnas *recommend* y *sentiment_analysis* de la tabla *Reviews*.
+   **Ejemplo de uso:** [pi-machine-learning.onrender.com/best_developer_year/2012](https://pi-machine-learning.onrender.com/best_developer_year/2012)
+
++ def **developer_reviews_analysis( *`desarrolladora` : str* )**:
+    Devuelve un diccionario con el nombre de la empresa `desarrolladora` y una lista con la cantidad total de registros de reseñas de usuarios que se encuentren categorizados somo positivo o negativo segun la columna *sentiment_analysis*. 
+    **Ejemplo de uso:** [pi-machine-learning.onrender.com/developer_reviews_analysis/Daybreak Game Company](https://pi-machine-learning.onrender.com/developer_reviews_analysis/Daybreak%20Game%20Company)
+
++ def **recomendacion_juego( *`id de producto`* )**:
+    Devuelve una lista de 5 juegos recomendados similares a juego correspondiente al `id` dado.
+    **Ejemplo de uso:** [pi-machine-learning.onrender.com/recomendacion_juego/401360](https://pi-machine-learning.onrender.com/recomendacion_juego/401360)
 
 ## Autor
 
