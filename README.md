@@ -12,7 +12,7 @@ Los datos empleados para la realizacion de este proyecto fueron extraidos del [R
 
 #### **Games**
 <p align="center">
-  <img src="https://github.com/carocardenas0699/PI-Machine-Learning/blob/main/imgs/games.png" alt="games" width="900"/>
+  <img src="imgs/games.png" alt="games" width="900"/>
 </p>
 
 1. **publisher** - string <br> &emsp; Empresa publicadora del contenido
@@ -31,7 +31,7 @@ Los datos empleados para la realizacion de este proyecto fueron extraidos del [R
 
 #### **Reviews**
 <p align="center">
-  <img src="https://github.com/carocardenas0699/PI-Machine-Learning/blob/main/imgs/reviews.png" alt="reviews" width="900"/>
+  <img src="imgs/reviews.png" alt="reviews" width="900"/>
 </p>
 
 1. **user_id** - string <br> &emsp; Identificador unico del usuario
@@ -48,7 +48,7 @@ Los datos empleados para la realizacion de este proyecto fueron extraidos del [R
 
 #### **Items**
 <p align="center">
-  <img src="https://github.com/carocardenas0699/PI-Machine-Learning/blob/main/imgs/items.png" alt="items" width="900"/>
+  <img src="imgs/items.png" alt="items" width="900"/>
 </p>
 
 1. **user_id** - string <br>
@@ -59,7 +59,7 @@ Los datos empleados para la realizacion de este proyecto fueron extraidos del [R
 Diccionario anidado con los items de cada usuario. Contenia los siguientes datos:
 
 <p align="center">
-  <img src="https://github.com/carocardenas0699/PI-Machine-Learning/blob/main/imgs/items_expanded.png" alt="items_expanded" width="500"/>
+  <img src="imgs/items_expanded.png" alt="items_expanded" width="500"/>
 </p>
 
 - **item_id** - string <br>
@@ -71,17 +71,17 @@ Diccionario anidado con los items de cada usuario. Contenia los siguientes datos
 
 #### **Games**
 <p align="center">
-  <img src="https://github.com/carocardenas0699/PI-Machine-Learning/blob/main/imgs/games_eda.png" alt="games_eda" width="900"/>
+  <img src="imgs/games_eda.png" alt="games_eda" width="900"/>
 </p>
 
 #### **Reviews**
 <p align="center">
-  <img src="https://github.com/carocardenas0699/PI-Machine-Learning/blob/main/imgs/reviews_eda.png" alt="reviews_eda" width="900"/>
+  <img src="imgs/reviews_eda.png" alt="reviews_eda" width="900"/>
 </p>
 
 #### **Items**
 <p align="center">
-  <img src="https://github.com/carocardenas0699/PI-Machine-Learning/blob/main/imgs/items_eda.png" alt="items_eda" width="500"/>
+  <img src="imgs/items_eda.png" alt="items_eda" width="500"/>
 </p>
 
 ## Estructura del Proyecto
