@@ -13,7 +13,12 @@ app = FastAPI()
 
 @app.get("/")
 def index():
-    return {"Sistema Recomendacion STEAM"}
+    return {
+        "Mensaje de bienvenida": [
+            "Proyecto Individual 1 - Sistema Recomendacion STEAM",
+            "Desarrollado por: Carolina Cardenas"
+        ]
+    }
 
 # Devuelve la cantidad de items y porcentaje de contenido Free por año para la empresa desarrolladora ingresada como
 # parametro.
