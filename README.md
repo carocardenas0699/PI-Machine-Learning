@@ -96,7 +96,7 @@ Las columnas nuevas del DataFrame son:
 <p align="center">
   <img src="imgs/items_eda.png" alt="items_eda" width="500"/>
 </p>
-En este DataFrame no se adicionaron columnas.
+En este DataFrame no se adicionaron columnas, **playtime** corresponde a la columna *playtime_forever* convertido a horas.
 
 ## Estructura del Proyecto
 
@@ -110,7 +110,7 @@ En este DataFrame no se adicionaron columnas.
 
 - **Archivos_API:** En este notebook se realizo las transformaciones (merge, join y drop) necesarias para crear un archivo especifico para cada funcion que se requiere ejecutar.
 
-- **EDA:** Contiene todo el Analisis Exploratorio de Datos del proyecto. Este incluye:
+- **[EDA:](https://github.com/carocardenas0699/PI-Machine-Learning/blob/main/EDA.ipynb)** Contiene todo el Analisis Exploratorio de Datos del proyecto. Este incluye:
     - Manejo de nulos, vacios y duplicados
     - Variables estadisticas
     - Graficos univariables (histogramas, diagramas de torta, boxplot)
@@ -180,8 +180,25 @@ A continuacion se presenta el orden de ejecucion del proyecto. Si se desea reali
 
 ## Metodologia
 
-## Resultados
+### Analisis de Sentimiento
+Para el analisis de sentimiento se llevaron a cabo los siguientes pasos:
+1. Se normalizaron los valores de la columna **review** del DataFrame *reviews* usando la libreria *Re*, para eliminar emoticones y demas caracteres que podrian complicar el analisis.
+2. Se realizo la tokenizacion de oraciones empleando *sent_tokenize* de la libreria *nltk*.
+3. Se creo el modelo de analisis **SentimentIntensityAnalyzer** de la libreria *Vader* de *nltk*.
+4. Se uso la funcion *polarity_scores* para evaluar cada oracion
+5. Se tomo el valor mas alto entre pos, neu y neg para determinar el valor de **sentiment_analysis**.
+   
+### Modelo de Recomendacion
+Para el modelo de recomendacion se empleo unicamente el DataFrame de games:
+1. Se realizo la union de los valores de las listas de las columnas **genres**, **tags** y **specs**.
+2. Se creo el modelo **MultiLabelBinarizer** de la libreria *scikit-learn* para convertir las categorias en columnas y evaluar cada item en 1 o 0
+3. Se normalizaron los valores de **price** y **release_year** usando el **StandardScaler** tambien de la libreria *scikit-learn* para poder incluirlos en el modelo.
+4. Se calculo la Matriz de Similitud del Coseno usando la funcion **cosine_similarity** de la libreria *scikit-learn* para las columnas generadas a partir de las listas, *price* y *release_year*.
+5. Para el valor de **item_id** ingresado por parametro se ubicaba la fila correspondiente en la matriz de similitud.
+6. Se ordenaban estos valores de mayor a menor y se tomaban los indices de los 5 primeros valores para los cuales se procedia buscar los *item_id* correspondientes.
 
+## Resultados
+Para este proyecto se desarrollaron 
 Link Deployment: https://pi-machine-learning.onrender.com/
 
 ## Autor
