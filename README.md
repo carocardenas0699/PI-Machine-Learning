@@ -142,12 +142,8 @@ A continuacion se presenta el orden de ejecucion del proyecto. Si se desea reali
 
 ## Resultados
 
-<<<<<<< HEAD
 Link Deployment: https://pi-machine-learning.onrender.com/
 
 ## Autor
 
 Carolina Cardenas - Contacto: [LinkedIn](https://www.linkedin.com/in/carolina-cardenas-gutierrez-b3b25114b/)
-=======
-Link Deployment: https://pi-machine-learning.onrender.com/docs
->>>>>>> 1b81da6923cb494f2c69e429036896f730b3b40f
