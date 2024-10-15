@@ -8,27 +8,27 @@
 ### Datos en bruto
 Los datos empleados para la realizacion de este proyecto fueron extraidos del [Repositorio PI01 - Soy Henry](https://github.com/soyHenry/PI_ML_OPS/tree/FT). A continuacion se describen los archivos en bruto.
 
-#### Games
+#### **Games**
 
-1. **publisher** - string <br>
-2. **genres** - list <br>
-3. **app_name** - string <br>
-4. **title** - string <br>
-6. **url** - string <br>
-7. **release_date** - string <br>
-8. **tags** - list <br>
-9. **reviews_url** - string <br>
-10. **specs** - list <br>
-11. **price** - string <br>
-12. **early_access** - float <br>
-13. **id** - float <br>
-14. **developer** - string <br>
+**1. publisher** - string <br>
+**2. genres** - list <br>
+**3. app_name** - string <br>
+**4. title** - string <br>
+**6. url** - string <br>
+**7. release_date** - string <br>
+**8. tags** - list <br>
+**9. reviews_url** - string <br>
+**10. specs** - list <br>
+**11. price** - string <br>
+**12. early_access** - float <br>
+**13. id** - float <br>
+**14. developer** - string <br>
 
-#### Reviews
+#### **Reviews**
 
-1. **user_id** - string <br>
-2. **user_url** - string <br>
-3. **reviews** - string <br>
+**1. user_id** - string <br>
+**2. user_url** - string <br>
+**3. reviews** - string <br>
 Diccionario anidado con las reviews de cada usuario. Contenia los siguientes datos:
     - **funny** - string <br>
     - **posted** - string <br>
@@ -38,13 +38,13 @@ Diccionario anidado con las reviews de cada usuario. Contenia los siguientes dat
     - **recommend** - string <br>
     - **review** - string <br> 
 
-#### Items
+#### **Items**
 
-1. **user_id** - string <br>
-2. **items_count** - int <br>
-3. **steam_id** - string <br>
-4. **user_url** - string <br>
-5. **items** - string <br>
+**1. user_id** - string <br>
+**2. items_count** - int <br>
+**3. steam_id** - string <br>
+**4. user_url** - string <br>
+**5. items** - string <br>
 Diccionario anidado con los items de cada usuario. Contenia los siguientes datos:
     - **item_id** - string <br>
     - **item_name** - string <br>
@@ -52,11 +52,11 @@ Diccionario anidado con los items de cada usuario. Contenia los siguientes datos
     - **playtime_2weeks** - float <br>
 ### DataFrames finales
 
-#### Games
+#### **Games**
 
-#### Reviews
+#### **Reviews**
 
-#### Items
+#### **Items
 
 ## Estructura del Proyecto
 
@@ -94,15 +94,15 @@ Diccionario anidado con los items de cada usuario. Contenia los siguientes datos
 
 ### Usando un entorno virtual
 
-1. Clonar el repositorio: 
+**1.** Clonar el repositorio: 
     ```
     git clone https://github.com/carocardenas0699/PI-Machine-Learning.git
     ```
-2. Crear un entorno virtual: 
+**2.** Crear un entorno virtual: 
     ```
     python -m venv venv
     ```
-3. Activar el entorno virtual:
+**3.** Activar el entorno virtual:
    - Windows: 
         ```
         venv\Scripts\activate
@@ -111,7 +111,7 @@ Diccionario anidado con los items de cada usuario. Contenia los siguientes datos
         ```
         source venv/bin/activate
         ```
-4. Instalar las dependencias: 
+**4.** Instalar las dependencias: 
     ```
     pip install -r requirements.txt
     ```
@@ -133,10 +133,10 @@ Diccionario anidado con los items de cada usuario. Contenia los siguientes datos
 
 ## Uso y Ejecucion
 A continuacion se presenta el orden de ejecucion del proyecto. Si se desea realizar la ejecucion desde el notebook de ETL se debe descarga los dataset originales en formato json desde la [fuente](https://github.com/soyHenry/PI_ML_OPS/tree/FT), de lo contrario se puede comenzar directamente desde el notebook EDA
-1. ETL.ipynb
-2. EDA.ipynb
-3. Archivos_API.ipynb
-4. main.py (o main.ipynb)
+**1.** ETL.ipynb
+**2.** EDA.ipynb
+**3.** Archivos_API.ipynb
+**4.** main.py (o main.ipynb)
 
 ## Metodologia
 
