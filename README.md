@@ -110,7 +110,7 @@ En este DataFrame no se adicionaron columnas, **playtime** corresponde a la colu
 
 - **Archivos_API:** En este notebook se realizo las transformaciones (merge, join y drop) necesarias para crear un archivo especifico para cada funcion que se requiere ejecutar.
 
-- **[EDA:](https://github.com/carocardenas0699/PI-Machine-Learning/blob/main/EDA.ipynb)** Contiene todo el Analisis Exploratorio de Datos del proyecto. Este incluye:
+- **[EDA:](EDA.ipynb)** Contiene todo el Analisis Exploratorio de Datos del proyecto. Este incluye:
     - Manejo de nulos, vacios y duplicados
     - Variables estadisticas
     - Graficos univariables (histogramas, diagramas de torta, boxplot)
