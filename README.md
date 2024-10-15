@@ -11,9 +11,9 @@
 Los datos empleados para la realizacion de este proyecto fueron extraidos del [Repositorio PI01 - Soy Henry](https://github.com/soyHenry/PI_ML_OPS/tree/FT). A continuacion se describen los archivos en bruto.
 
 #### **Games**
-<p align="center">
-  <img src="imgs/games.png" alt="games" width="900"/>
-</p>
+Es el archivo en el que se encuentra toda la informacion relacionada con el contenido que se ofrece en la plataforma STEAM. <br>
+
+![reviews_expanded](imgs/games2.png)
 
 1. **publisher** - string <br> &emsp; Empresa publicadora del contenido
 2. **genres** - list <br> &emsp; Genero del contenido
@@ -30,14 +30,16 @@ Los datos empleados para la realizacion de este proyecto fueron extraidos del [R
 14. **developer** - string <br> &emsp; Desarrollador del contenido
 
 #### **Reviews**
-<p align="center">
-  <img src="imgs/reviews.png" alt="reviews" width="900"/>
-</p>
+Este archivo contiene las reseñas realizadas por cada usuario de la plataforma. <br>
+
+![reviews](imgs/reviews2.png)
+
 
 1. **user_id** - string <br> &emsp; Identificador unico del usuario
 2. **user_url** - string <br> &emsp; URL del perfil del usuario
 3. **reviews** - string <br> &emsp; Reviews del usuario en formato JSON. Contenia los siguientes datos: <br>
 ![reviews_expanded](imgs/Imagen2.png)
+
     - **funny** - string <br> 
     - **posted** - string <br> Fecha de publicacion
     - **last_edited** - string <br> &emsp; Ultima fecha de edicion
@@ -47,25 +49,24 @@ Los datos empleados para la realizacion de este proyecto fueron extraidos del [R
     - **review** - string <br> &emsp; Reseña escrita por el usuario
 
 #### **Items**
+En este archivo se encuentran el contenido que ha adquirido cada usuario y el tiempo de juego para cada uno. <br>
+
 <p align="center">
   <img src="imgs/items.png" alt="items" width="900"/>
 </p>
 
-1. **user_id** - string <br>
-2. **items_count** - int <br>
-3. **steam_id** - string <br>
-4. **user_url** - string <br>
-5. **items** - string <br>
+1. **user_id** - string <br> Identificador unico del usuario
+2. **items_count** - int <br> Cantidad de contenido adquirido por el usuario
+3. **steam_id** - string <br> Identificador unico del usuario en la plataforma
+4. **user_url** - string <br> URL del perfil del usuario
+5. **items** - string <br> Contenido adquirido por el usuario en formato JSON. Contenia los siguientes datos:
 Diccionario anidado con los items de cada usuario. Contenia los siguientes datos:
+![items_expanded](./imgs/items_expanded2.png)
 
-<p align="center">
-  <img src="imgs/items_expanded.png" alt="items_expanded" width="500"/>
-</p>
-
-- **item_id** - string <br>
-- **item_name** - string <br>
-- **playtime_forever** - float <br>
-- **playtime_2weeks** - float <be>
+    - **item_id** - string <br> Identificador unico del contenido
+    - **item_name** - string <br> Nombre del contenido
+    - **playtime_forever** - float <br> Tiempo de juego acumulado por el usuario
+    - **playtime_2weeks** - float <br> Tiempo de juego del usuario en las ultimas 2 semanas
 
 ### DataFrames finales
 
@@ -74,15 +75,28 @@ Diccionario anidado con los items de cada usuario. Contenia los siguientes datos
   <img src="imgs/games_eda.png" alt="games_eda" width="900"/>
 </p>
 
+Las columnas nuevas del DataFrame son:
+- **item_name** que corresponde a la columna *app_name*
+- **item_id** que corresponde a la columna *id*
+- **release_year** es el año de lanzamiento extraido de *release_date*
+
+
 #### **Reviews**
 <p align="center">
   <img src="imgs/reviews_eda.png" alt="reviews_eda" width="900"/>
 </p>
 
+Las columnas nuevas del DataFrame son:
+- **item_name** es el nombre del contenido
+- **sentiment_analysis** que corresponde a un analisis de sentimiento de la columna *review*
+- **words** son las palabras principales extraidas de la columna *review*
+- **word_count** es el numero de palabras de la columna *review*
+
 #### **Items**
 <p align="center">
   <img src="imgs/items_eda.png" alt="items_eda" width="500"/>
 </p>
+En este DataFrame no se adicionaron columnas.
 
 ## Estructura del Proyecto
 
