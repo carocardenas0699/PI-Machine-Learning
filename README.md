@@ -205,23 +205,23 @@ Para este proyecto se realizaron 6 funciones que se pueden desarrollaron en los 
     **Ejemplo de uso:** [pi-machine-learning.onrender.com/developer/DL Softworks](https://pi-machine-learning.onrender.com/developer/DL%20Softworks)
 
 + def **userdata( *`User_id` : str* )**:
-    Devuelve la cantidad de dinero gastado por el `usuario`, el porcentaje de recomendacion y la cantidad de items reseñados.
+    Devuelve la cantidad de dinero gastado por el `usuario`, el porcentaje de recomendacion y la cantidad de items reseñados. <br>
     **Ejemplo de uso:** [pi-machine-learning.onrender.com/userdata/76561198070565427](https://pi-machine-learning.onrender.com/userdata/76561198070565427)
 
 + def **UserForGenre( *`genero` : str* )**:
-    Devuelve el usuario que acumula más horas jugadas para el `género` dado y una lista de la acumulación de horas jugadas por año de lanzamiento.
+    Devuelve el usuario que acumula más horas jugadas para el `género` dado y una lista de la acumulación de horas jugadas por año de lanzamiento. <br>
     **Ejemplo de uso:** [pi-machine-learning.onrender.com/UserForGenre/Aventure](https://pi-machine-learning.onrender.com/UserForGenre/Adventure)
 	
 + def **best_developer_year( *`año` : int* )**:
-   Devuelve el top 3 de desarrolladores con juegos más recomendados por usuarios para el `año` dado basado en las columnas *recommend* y *sentiment_analysis* de la tabla *Reviews*.
+   Devuelve el top 3 de desarrolladores con juegos más recomendados por usuarios para el `año` dado basado en las columnas *recommend* y *sentiment_analysis* de la tabla *Reviews*. <br>
    **Ejemplo de uso:** [pi-machine-learning.onrender.com/best_developer_year/2012](https://pi-machine-learning.onrender.com/best_developer_year/2012)
 
 + def **developer_reviews_analysis( *`desarrolladora` : str* )**:
-    Devuelve un diccionario con el nombre de la empresa `desarrolladora` y una lista con la cantidad total de registros de reseñas de usuarios que se encuentren categorizados somo positivo o negativo segun la columna *sentiment_analysis*. 
+    Devuelve un diccionario con el nombre de la empresa `desarrolladora` y una lista con la cantidad total de registros de reseñas de usuarios que se encuentren categorizados somo positivo o negativo segun la columna *sentiment_analysis*. <br> 
     **Ejemplo de uso:** [pi-machine-learning.onrender.com/developer_reviews_analysis/Daybreak Game Company](https://pi-machine-learning.onrender.com/developer_reviews_analysis/Daybreak%20Game%20Company)
 
 + def **recomendacion_juego( *`id de producto`* )**:
-    Devuelve una lista de 5 juegos recomendados similares a juego correspondiente al `id` dado.
+    Devuelve una lista de 5 juegos recomendados similares a juego correspondiente al `id` dado. <br>
     **Ejemplo de uso:** [pi-machine-learning.onrender.com/recomendacion_juego/401360](https://pi-machine-learning.onrender.com/recomendacion_juego/401360)
 
 ## Autor
