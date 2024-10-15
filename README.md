@@ -1,4 +1,6 @@
-# Proyecto Individual 1 - Sistema de Recomendacion de STEAM
+<h1 align='center'>
+<b>Proyecto Individual 1 - Sistema de Recomendacion de STEAM</b>
+</h1>
 
 ## Descripcion General
 
@@ -9,54 +11,78 @@
 Los datos empleados para la realizacion de este proyecto fueron extraidos del [Repositorio PI01 - Soy Henry](https://github.com/soyHenry/PI_ML_OPS/tree/FT). A continuacion se describen los archivos en bruto.
 
 #### **Games**
+<p align="center">
+  <img src="https://github.com/carocardenas0699/PI-Machine-Learning/blob/main/imgs/games.png" alt="games" width="900"/>
+</p>
 
-**1. publisher** - string <br>
-**2. genres** - list <br>
-**3. app_name** - string <br>
-**4. title** - string <br>
-**6. url** - string <br>
-**7. release_date** - string <br>
-**8. tags** - list <br>
-**9. reviews_url** - string <br>
-**10. specs** - list <br>
-**11. price** - string <br>
-**12. early_access** - float <br>
-**13. id** - float <br>
-**14. developer** - string <br>
+1. **publisher** - string <br> &emsp; Empresa publicadora del contenido
+2. **genres** - list <br> &emsp; Genero del contenido
+3. **app_name** - string <br> &emsp; Nombre del contenido
+4. **title** - string <br> &emsp; Titulo del contenido
+6. **url** - string <br> &emsp; URL de publicacion del contenido
+7. **release_date** - string <br> &emsp; Fecha de lanzamiento
+8. **tags** - list <br> &emsp; Etiquetas del contenido
+9. **reviews_url** - string <br> &emsp; URL de las reviews del contenido
+10. **specs** - list <br> &emsp; Especificaciones del contenido
+11. **price** - string <br> &emsp; Precio del contenido
+12. **early_access** - float <br> &emsp; Acceso temprano al contenido
+13. **id** - float <br> &emsp; Identificador unico del contenido
+14. **developer** - string <br> &emsp; Desarrollador del contenido
 
 #### **Reviews**
+<p align="center">
+  <img src="https://github.com/carocardenas0699/PI-Machine-Learning/blob/main/imgs/reviews.png" alt="reviews" width="900"/>
+</p>
 
-**1. user_id** - string <br>
-**2. user_url** - string <br>
-**3. reviews** - string <br>
-Diccionario anidado con las reviews de cada usuario. Contenia los siguientes datos:
-    - **funny** - string <br>
-    - **posted** - string <br>
-    - **last_edited** - string <br>
-    - **item_id** - string <br>
-    - **helpful** - string <br>
-    - **recommend** - string <br>
-    - **review** - string <br> 
+1. **user_id** - string <br> &emsp; Identificador unico del usuario
+2. **user_url** - string <br> &emsp; URL del perfil del usuario
+3. **reviews** - string <br> &emsp; Reviews del usuario en formato JSON. Contenia los siguientes datos: <br>
+![reviews_expanded](imgs/Imagen2.png)
+    - **funny** - string <br> 
+    - **posted** - string <br> Fecha de publicacion
+    - **last_edited** - string <br> &emsp; Ultima fecha de edicion
+    - **item_id** - string <br> &emsp; Identificador unico del contenido
+    - **helpful** - string <br> Indicador de si la reseña del usuario fue util
+    - **recommend** - string <br> &emsp; Indicador de si el contenido fue recomendado por el usuario
+    - **review** - string <br> &emsp; Reseña escrita por el usuario
 
 #### **Items**
+<p align="center">
+  <img src="https://github.com/carocardenas0699/PI-Machine-Learning/blob/main/imgs/items.png" alt="items" width="900"/>
+</p>
 
-**1. user_id** - string <br>
-**2. items_count** - int <br>
-**3. steam_id** - string <br>
-**4. user_url** - string <br>
-**5. items** - string <br>
+1. **user_id** - string <br>
+2. **items_count** - int <br>
+3. **steam_id** - string <br>
+4. **user_url** - string <br>
+5. **items** - string <br>
 Diccionario anidado con los items de cada usuario. Contenia los siguientes datos:
-    - **item_id** - string <br>
-    - **item_name** - string <br>
-    - **playtime_forever** - float <br>
-    - **playtime_2weeks** - float <br>
+
+<p align="center">
+  <img src="https://github.com/carocardenas0699/PI-Machine-Learning/blob/main/imgs/items_expanded.png" alt="items_expanded" width="500"/>
+</p>
+
+- **item_id** - string <br>
+- **item_name** - string <br>
+- **playtime_forever** - float <br>
+- **playtime_2weeks** - float <be>
+
 ### DataFrames finales
 
 #### **Games**
+<p align="center">
+  <img src="https://github.com/carocardenas0699/PI-Machine-Learning/blob/main/imgs/games_eda.png" alt="games_eda" width="900"/>
+</p>
 
 #### **Reviews**
+<p align="center">
+  <img src="https://github.com/carocardenas0699/PI-Machine-Learning/blob/main/imgs/reviews_eda.png" alt="reviews_eda" width="900"/>
+</p>
 
-#### **Items
+#### **Items**
+<p align="center">
+  <img src="https://github.com/carocardenas0699/PI-Machine-Learning/blob/main/imgs/items_eda.png" alt="items_eda" width="500"/>
+</p>
 
 ## Estructura del Proyecto
 
@@ -94,15 +120,15 @@ Diccionario anidado con los items de cada usuario. Contenia los siguientes datos
 
 ### Usando un entorno virtual
 
-**1.** Clonar el repositorio: 
+1. Clonar el repositorio: 
     ```
     git clone https://github.com/carocardenas0699/PI-Machine-Learning.git
     ```
-**2.** Crear un entorno virtual: 
+2. Crear un entorno virtual: 
     ```
     python -m venv venv
     ```
-**3.** Activar el entorno virtual:
+3. Activar el entorno virtual:
    - Windows: 
         ```
         venv\Scripts\activate
@@ -111,7 +137,7 @@ Diccionario anidado con los items de cada usuario. Contenia los siguientes datos
         ```
         source venv/bin/activate
         ```
-**4.** Instalar las dependencias: 
+4. Instalar las dependencias: 
     ```
     pip install -r requirements.txt
     ```
@@ -133,10 +159,10 @@ Diccionario anidado con los items de cada usuario. Contenia los siguientes datos
 
 ## Uso y Ejecucion
 A continuacion se presenta el orden de ejecucion del proyecto. Si se desea realizar la ejecucion desde el notebook de ETL se debe descarga los dataset originales en formato json desde la [fuente](https://github.com/soyHenry/PI_ML_OPS/tree/FT), de lo contrario se puede comenzar directamente desde el notebook EDA
-**1.** ETL.ipynb
-**2.** EDA.ipynb
-**3.** Archivos_API.ipynb
-**4.** main.py (o main.ipynb)
+1. ETL.ipynb
+2. EDA.ipynb
+3. Archivos_API.ipynb
+4. main.py (o main.ipynb)
 
 ## Metodologia
 
