@@ -3,7 +3,32 @@
 </h1>
 
 ## Descripcion General
-En este proyecto se desarrolló un sistema de recomendación para Steam, una plataforma multinacional de videojuegos. Debido al estado de los datos entregados se debió realizar un proceso de limpieza y adecuación de los datos para que aportaran información apropiada para el modelo a desarrollar. 
+En este proyecto se desarrolló un sistema de recomendación para Steam, una plataforma multinacional de videojuegos. Debido al estado de los datos entregados se debió realizar un proceso de limpieza y adecuación de los datos para que aportaran información apropiada para el modelo a desarrollar.
+
+## Tabla de Contenido
+1. [Descripción de la Estructura de Datos](#descripción-de-la-estructura-de-datos) <br>
+    1.1 [Datos en bruto](#datos-en-bruto) <br>
+      - [Games](#games) <br>
+      - [Reviews](#reviews) <br>
+      - [Items](#items) <br>
+
+    1.2 [Datos finales](#dataframes-finales)<br>
+      - [Games](#games-1) <br>
+      - [Reviews](#reviews-1) <br>
+      - [Items](#items-1) <br>
+
+2. [Estructura del Proyecto](#estructura-del-proyecto) <br>
+    2.1 [Carpetas](#carpetas) <br>
+    2.2 [Notebooks](#notebooks)<br>
+    2.3 [Archivos adicionales](#archivos-adicionales) <br>
+3. [Instalación](#instalacion) <br>
+    3.1 [Usando un entorno virtual](#usando-un-entorno-virtual) <br>
+    3.2 [Librerias instaladas](#librerias-instaladas) <br>
+4. [Uso y Ejecucion](#uso-y-ejecucion) <br>
+5. [Metodología](#metodologia) <br>
+    5.1 [Analisis de Sentimiento](#analisis-de-sentimiento) <br>
+    5.2 [Modelo de Recomendación](#modelo-de-recomendacion) <br>
+6. [Resultados](#resultados) <br>
 
 ## Descripción de la Estructura de Datos
 
@@ -68,7 +93,7 @@ Diccionario anidado con los items de cada usuario. Contenia los siguientes datos
     - **playtime_forever** - float <br> Tiempo de juego acumulado por el usuario
     - **playtime_2weeks** - float <br> Tiempo de juego del usuario en las ultimas 2 semanas
 
-### DataFrames finales
+### Datos finales
 
 #### **Games**
 <p align="center">
