@@ -3,7 +3,7 @@
 </h1>
 
 ## Descripcion General
-
+En este proyecto se desarrolló un sistema de recomendación para Steam, una plataforma multinacional de videojuegos. Debido al estado de los datos entregados se debió realizar un proceso de limpieza y adecuación de los datos para que aportaran información apropiada para el modelo a desarrollar. 
 
 ## Descripción de la Estructura de Datos
 
